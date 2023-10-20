@@ -193,6 +193,72 @@
 
 
 
+    <br>
+    1. Screenshots on failed tests (SearchInvalidCategory)
+    <br>
+    2. Explicit/implicit waits
+    <br>
+    3. Logs (SearchCategoryTest)
+    <br>
+    4. testng.xml - run UI tests using // @Test (groups = {"Regression"}) !!
+
+    <br>
+
+
+
+
+
+
+
+
+    //public void testSearchInvalidCategory() {
+    //$(byXpath(invalidCategoryLink)).click();
+    //$(By.linkText("")).shouldNotHave(Condition.href(Variables.mainPageLink + "blog/"));
+
+    //closeWindow();
+
+    //class ScreenshotListener extends TestListenerAdapter {
+    //
+    //    @Override
+    //    public void onTestFailure(ITestResult result) {
+    //         // Capture and save a screenshot when a test fails
+    //         captureScreenshot(result.getName());
+    }
+
+    //    private void captureScreenshot(String testName) {
+    //        File screenshotFile = ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.FILE);
+    //
+    //        LocalDateTime now = LocalDateTime.now();
+    //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+    //        String timestamp = now.format(formatter);
+    //
+    //        if (screenshotFile != null) {
+    //
+    //            String screenshotFileName = "screenshots/" + testName + "_" + timestamp + ".png";
+    //
+    //            try {
+    //                org.apache.commons.io.FileUtils.copyFile(screenshotFile, new File("C:\\Projects\\selenium-java-s\\build\\reports\\tests"));
+    //                System.out.println("Screenshot saved: " + "C:\\Projects\\selenium-java-s\\build\\reports\\tests");
+    //            } catch (IOException e) {
+    //                System.err.println("Failed to capture screenshot: " + e.getMessage());
+    //            }
+    //        } else {
+    //            System.err.println("Failed to capture screenshot. screenshotFile is null.");
+    //        }
+    //    }
+    //}
+
+
+    //}
+    }
+
+
+
+    <br>
+
+
+
+
 
 </h5>
 
