@@ -57,5 +57,5 @@ public class WikimediaAPITest {
                 .assertThat().statusCode(404);
 
     }
-
 }
+

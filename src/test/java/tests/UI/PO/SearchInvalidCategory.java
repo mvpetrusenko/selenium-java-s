@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
 import tests.UI.base.Variables;
-//import tests.UI.tests.SearchCategoryTest;
 import org.openqa.selenium.By;
 
 
@@ -14,6 +13,42 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 
 
+
+
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import org.testng.internal.Utils;
+import tests.UI.base.Variables;
+import org.openqa.selenium.By;
+import org.testng.*;
+
+import java.io.File;
+import java.io.IOException;
+
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.*;
+import static org.testng.ITestResult.FAILURE;
+
+import org.apache.commons.io.FileUtils;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.*;
+import static org.testng.ITestResult.FAILURE;
 
 public class SearchInvalidCategory {
 
@@ -33,40 +68,20 @@ public class SearchInvalidCategory {
         // Maximize the window
         driver.manage().window().maximize();
 
-
         // Open the url using Selenide method
         open(Variables.mainPageLink);
 
     }
 
-
-
-   // public static String categoryLink = "//a[@href='/blog/']";
-
     public static String invalidCategoryLink = "//a[@href='/news/']";
+    // public static String invalidCategoryLink = "//a[@href='/newww/']";
 
 
-
-
-    //@Test(groups = {"Regression"})
     public void testSearchInvalidCategory() {
         $(byXpath(invalidCategoryLink)).click();
         $(By.linkText("")).shouldNotHave(Condition.href(Variables.mainPageLink + "blog/"));
-        //$(By.linkText("Blog")).shouldHave(Condition.href(Variables.mainPageLink + "blog/"));
-
 
         closeWindow();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 

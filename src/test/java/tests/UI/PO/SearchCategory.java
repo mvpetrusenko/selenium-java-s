@@ -6,13 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeMethod;
 import tests.UI.base.Variables;
-//import tests.UI.tests.SearchCategoryTest;
 import org.openqa.selenium.By;
-
-
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
-
 
 
 public class SearchCategory {
@@ -33,27 +29,19 @@ public class SearchCategory {
         // Maximize the window
         driver.manage().window().maximize();
 
-
         // Open the url using Selenide method
         open(Variables.mainPageLink);
 
     }
 
-
-
     public static String categoryLink = "//a[@href='/blog/']";
 
 
-
-
-    //@Test(groups = {"Regression"})
     public void testSearchCategory() {
         $(byXpath(categoryLink)).click();
         $(By.linkText("Blog")).shouldHave(Condition.href(Variables.mainPageLink + "blog/"));
 
-
         closeWindow();
     }
 }
-
 
