@@ -23,7 +23,7 @@ public class SearchResult {
         options.addArguments("--remote-allow-origins=*");
         ChromeDriver driver = new ChromeDriver(options);
 
-        // Set the driver for the current thread
+        // Set the driver for the current thread !
         WebDriverRunner.setWebDriver(driver);
 
         // Maximize the window
