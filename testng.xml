@@ -12,10 +12,14 @@
         </groups>
 
 
+
+
         <classes>
             <class name="tests.restAPI.WikimediaAPITest"/>
             <class name="tests.UI.tests.ChangeLanguageTest"/>
             <class name="tests.UI.tests.SearchCategoryTest"/>
+            <class name="tests.UI.tests.SearchInvalidCategoryTest"/>
+            <class name="tests.UI.tests.SearchResultTest"/>
 
 
 
